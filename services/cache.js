@@ -9,8 +9,8 @@ client.hget = util.promisify(client.hget)
 const exec = mongoose.Query.prototype.exec
 
 mongoose.Query.prototype.cache = function(options = {}) {
-  this.useCache= true
-  this.hashKey = JSON.stringify(options.key || '')
+  this.useCache= true;
+  this.hashKey = JSON.stringify(options.key || '');
 
   // make chainable
   return this
